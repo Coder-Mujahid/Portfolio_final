@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coder-Mujahid.Portfolio</title> 
+    <link rel="shortcut icon" href="img/code_1903496.png" type="image/x-icon">
+    <script src="./node_modules/preline/dist/preline.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.7.7/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/rippleui@1.12.1/dist/css/styles.css"/>
+    
+
+</head>
+<body class=" bg-[#E7E7E7]">
+    <!-- manu bar -->
+    <header>
+        <div class="navbar bg-base-100 w-11/12 mx-auto">
+            <div class="flex-1">
+              <!-- drower menu start -->
+                <input type="checkbox" id="drawer-left" class="drawer-toggle" />
+
+                <label for="drawer-left"><i class='bx bx-menu text-4xl font-semibold border-solid border-2 border-black px-[5px] py-[4px] rounded-full'></i></label><img class="w-44 ml-10" src="img/Black___White_Minimalist_Business_Logo-removebg-preview.png" alt="image">
+                <label class="overlay" for="drawer-left"></label>
+
+                <div class="drawer bg-slate-300">
+                    <div class="drawer-content pt-10 flex flex-col h-full">
+                        <label for="drawer-left" class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 ">✕</label>
+                        <br>
+                        <div class="bg-slate-100 rounded">
+                            <!-- menu -->
+                            <nav class="menu bg-gray-2 p-4 rounded-md">
+                                <section class="menu-section">
+                                    <span class="text-xl font-semibold capitalize bg-slate-200 p-3 rounded">Main menu</span>
+                                    <ul class="menu-items">
+                                        <li class="menu-item text-lg font-semibold capitalize"></i>home</li>
+                                        <li class="menu-item text-lg font-semibold capitalize">about me</li>
+                                        <li class="menu-item text-lg font-semibold capitalize">Projects</li>
+                                        <li class="menu-item text-lg font-semibold capitalize">skills</li>
+                                        <li class="menu-item text-lg font-semibold capitalize">reviews</li>
+                                        <li class="menu-item text-lg font-semibold capitalize">contact</li>
+
+                                    </ul>
+                                </section>
+                            </nav>
+                        </div>
+                        <div class="h-full flex flex-row justify-end items-end gap-2">
+                            <aside>
+                                <p class="capitalize font-semibold">Copyright © 2023 -Md Mujahidul Islam</p>
+                              </aside>
+                        </div>
+                    </div>
+                </div>
+              <!-- drower menu end -->
+            </div>
+            <div class="flex-none gap-2">
+              <div class="form-control hidden md:block">
+                <input type="text" placeholder="Search" class="input input-bordered w-24 mx-5 md:w-auto" />
+              </div>
+              <div class="dropdown dropdown-end">
+                <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                  <div class="w-10 rounded-full">
+                    <img src="img/Untitled_design__6_-removebg-preview.png" alt="img">
+                  </div>
+                </label>
+                <ul tabindex="0" class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+                 <li><a target="_blank" class="text-lg font-semibold" href="https://www.facebook.com/home.php"><i class='bx bxl-facebook-circle'></i>Facebook</a></li>
+                 <li><a target="_blank" class="text-lg font-semibold" href="https://www.instagram.com/?hl=en"><i class='bx bxl-instagram-alt' ></i>Instagram</a></li>
+                 <li><a target="_blank" class="text-lg font-semibold" href="https://bd.linkedin.com/"><i class='bx bxl-linkedin-square'></i>linkedin</a></li>
+                 <li><a target="_blank" class="text-lg font-semibold" href="https://github.com/"><i class='bx bxl-github'></i>github</a></li>
+                 <li><a target="_blank" class="text-lg font-semibold" href="file:///C:/Users/Mujahidul%20Islam/Downloads/Documents/Md_Mojahidul_Islam.pdf"><i class='bx bx-file'></i>Resume</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    </header>
+    <!-- hero section -->
+
+    <section class="body-font text-black w-screen">
+        <div class=" w-11/12 container mx-auto flex px-5 py-24 md:flex-row flex-col items-center justify-between">
+          <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+            <p class="text-base font-semibold capitalize mb-3 ">hello there welcome to my portfolio</p>
+            <h3  class="text-lg text- font-bold capitalize ">i am <span class="text-teal-700">mujahid islam</span></h3>
+            <h2  class="text-4xl text-orange-600 font-bold capitalize mb-2 ">a full stack develoer</h2>
+            <p class="text-xs font-semibold capitalize mb-5 "">Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic tumeric truffaut hexagon try-hard chambray.</p>
+            <div class="flex justify-center ">
+                <h3  class="text-lg text- font-bold capitalize inline-flex items-center mr-5">to<span class="text-rose-700 ml-1"> Hire me</span></h3>
+              <!-- modal button -->
+              <button class="inline-flex text-black bg-slate-300  border-0 py-2 px-5 focus:outline-none hover:bg-slate-400  rounded text-lg text- font-semibold"  onclick="my_modal_1.showModal()">Contact Me</button>
+                <dialog id="my_modal_1" class="modal">
+                <div class="modal-box">
+
+                    <div class="modal-action mt-1">
+                        <form method="dialog">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button  class=" bg-none w-2 pb-3 pr-4 font-semibold text-lg">✕</button>
+                        </form>
+                    </div>
+
+                    <div>
+                        <div class="flex gap-2">
+                            <button type="button" class="w-full py-2 px-4 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-black text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-base dark:focus:ring-offset-gray-800 uppercase">
+                                <i class='bx bx-chat text-2xl' ></i> via support chat
+                            </button>
+                            <button type="button" class="w-full py-2 px-4 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-black text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-base dark:focus:ring-offset-gray-800 uppercase">
+                                <i class='bx bxs-phone  text-2xl' ></i>via call
+                            </button>
+                        </div>
+
+                        <div class="">
+                            <button type="button" class="w-full py-2 px-4 mt-2 inline-flex justify-center items-center gap-2 rounded-md border-2 font-semibold bg-white text-black hover:bg-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-base dark:focus:ring-offset-gray-800 uppercase">
+                                <i class='bx bxs-phone  text-2xl' ></i>via call
+                            </button>
+
+                            <label for="input-label-with-helper-text" class="block text-sm font-medium mb-2 dark:text-white">Your Name</label>
+                            <input type="text" id="input-label-with-helper-text" class="py-3 px-4 block w-full border-2 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400" placeholder="your name" aria-describedby="hs-input-helper-text">
+
+                            <label for="input-label-with-helper-text" class="block text-sm font-medium mb-2 dark:text-white">Email</label>
+                            <input type="email" id="input-label-with-helper-text" class="py-3 px-4 block w-full border-2 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400" placeholder="you@site.com" aria-describedby="hs-input-helper-text">
+
+                            <label for="input-label-with-helper-text" class="block text-sm font-medium mb-2 dark:text-white">Your massage hear</label>
+                            <textarea class="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 border-2 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400" rows="3" placeholder="Your massage hear"></textarea>
+
+                            <button type="button" class="w-full py-2 px-4 my-2 inline-flex justify-center items-center gap-2 rounded-md border-2 font-semibold bg-black text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-base dark:focus:ring-offset-gray-800 uppercase">
+                            Submit
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+                </dialog>
+            </div>
+          </div>
+          <!-- modalbutton end -->
+          <div class="">
+            <div class="border-[10px] border-black rounded-full overflow-hidden">
+                <img class="p-4 md:p-2" src="img/Untitled_design__6_-removebg-preview.png" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+      <br>
+
+
+      <!-- about section -->
+
+      <section class=" mb-20 flex items-center justify-center ">
+        <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+            <div class="grid items-center grid-cols-1 md:grid-cols-2">
+    
+                <div>
+                    <h2 class="text-4xl text-orange-600 font-bold capitalize mb-2 ">About Me 👋
+                    </h2>
+                    <p class="text-sm font-semibold capitalize mb-5">
+                      Hello, I'm Md Mujahid Islam, a passionate and versatile full-stack developer with a strong background in creating web applications and software solutions. I thrive on turning complex problems into elegant and intuitive digital experiences. My goal is to build robust, efficient, and user-friendly applications that make a positive impact.
+                    </p>
+
+                    <h2 class="text-4xl text-cyan-500 font-bold capitalize mb-2">What I Do
+                    </h2>
+                    <p class="text-sm font-semibold capitalize mb-5">
+                      I specialize in both front-end and back-end development, which means I can handle every aspect of a project from concept to deployment. Here's a brief overview of my skills and expertise:
+                    </p>
+    
+                    <p class="mt-4 text-xl text-gray-600 md:mt-8">
+                        <span class="relative inline-block">
+                            <span class="absolute inline-block w-full bottom-0.5 h-2 bg-yellow-300"></span>
+                        <span class="relative"> Have a question? </span>
+                        </span>
+                        <br class="block sm:hidden" />Ask me on <a target="_blank" href="https://twitter.com/?lang=en" title="twitter"
+                            class="transition-all duration-200 text-sky-500 hover:text-sky-600 hover:underline">Twitter</a>
+                    </p>
+                </div>
+    
+                <div class="">
+                    <img class=" p-5 xl:max-w-lg xl:mx-auto 2xl:origin-bottom 2xl:scale-110" src="img/Coming_Soon_Website_in_Black_Turquoise_Neon_Green_Bold_Gradient_Style-removebg-preview.png" alt="img" />
+                </div>
+    
+            </div>
+        </div>
+    </section>
+
+
+    <!-- project section -->
+
+    <section>
+      <div class="md:flex flex-col text-center w-full mb-10">
+        <h2 class="text-4xl text-orange-600 font-bold capitalize mb-2 ">my projects</h2>
+        <p class="lg:w-2/3 mx-auto text-sm font-semibold capitalize mb-5">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom.</p>
+      </div>
+      <div class="md:grid grid-cols-3 mx-auto w-10/12 gap-5 ">
+        <!-- 01 -->
+        <div class="card bg-base-100 shadow-xl overflow-hidden mb-5">
+          <img class="h-full" src="img/bank.png" alt="img" />
+          <div class="card-body">
+            <h2 class="card-title pb-2">simple bank function!</h2>
+            <div class="card-actions justify-end">
+              <a target="_blank" class="w-full py-2 rounded bg-sky-500 font-semibold text-center" href="https://coder-mujahid.github.io/bank_counter/">visite now</a>
+            </div>
+          </div>
+        </div>
+        <!-- 02 -->
+        <div class="card bg-base-100 shadow-xl overflow-hidden mb-5">
+          <img class="h-full"src="img/bike.png" alt="img"/>
+          <div class="card-body">
+            <h2 class="card-title pb-2">responsive_bike_shop_site!</h2>
+            <div class="card-actions justify-end">
+              <a target="_blank" class="w-full py-2 rounded bg-sky-500 font-semibold text-center" href="https://coder-mujahid.github.io/responsive_bike_shop_site/">visite now</a>
+            </div>
+          </div>
+        </div>
+        <!-- 3 -->
+        <div class="card bg-base-100 shadow-xl overflow-hidden mb-5">
+          <img class="h-full" src="img/staryup.png" alt="img" />
+          <div class="card-body">
+            <h2 class="card-title pb-2">StartupLanding!</h2>
+            <div class="card-actions justify-end">
+              <a target="_blank" class="w-full py-2 rounded bg-sky-500 font-semibold text-center" href="https://coder-mujahid.github.io/Startup_Landing_page/">visite now</a>
+            </div>
+          </div>
+        </div>
+        <!-- 4 -->
+        <div class="card bg-base-100 shadow-xl overflow-hidden mb-5">
+          <img class="h-full" src="img/asus.png" alt="img" />
+          <div class="card-body">
+            <h2 class="card-title pb-2">asus-shop!</h2>
+            <div class="card-actions justify-end">
+              <a target="_blank" class="w-full py-2 rounded bg-sky-500 font-semibold text-center" href="https://coder-mujahid.github.io/portfolio-1.01/">visite now</a>
+            </div>
+          </div>
+        </div>
+        <!-- 5 -->
+        <div class="card bg-base-100 shadow-xl overflow-hidden mb-5">
+          <img class="h-full" src="img/port.png" alt="img" />
+          <div class="card-body">
+            <h2 class="card-title pb-2">portfolio-1!</h2>
+            <div class="card-actions justify-end">
+              <a target="_blank" class="w-full py-2 rounded bg-sky-500 font-semibold text-center" href="https://coder-mujahid.github.io/portfolio-1.01/">visite now</a>
+            </div>
+          </div>
+        </div>
+        <!-- 6 -->
+        <div class="card bg-base-100 shadow-xl overflow-hidden mb-5">
+          <img class="h-full" src="img/mujahid.png" alt="img" />
+          <div class="card-body">
+            <h2 class="card-title pb-2">think_box!</h2>
+            <div class="card-actions justify-end">
+              <a target="_blank" class="w-full py-2 rounded bg-sky-500 font-semibold text-center" href="https://coder-mujahid.github.io/practice_project01/">visite now</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- skill section -->
+
+    <section class="py-20">
+      <div class="md:flex flex-col text-center w-full mb-10">
+        <h2 class="text-4xl text-orange-600 font-bold capitalize mb-2 ">my projects</h2>
+        <p class="lg:w-2/3 mx-auto text-sm font-semibold capitalize mb-5">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom.</p>
+      </div>
+
+      <div class="md:grid grid-cols-2 mx-auto w-10/12 gap-5">
+
+        <div class="md:flex gap-2 p-2 mb-5">
+          <div class="w-auto">
+            <img class="p-1 w-28 object-fill mx-auto" src="img/html.png" alt="img">
+          </div>
+          <div class="w-auto">
+            <h2 class="text-xl text-orange-600 font-bold capitalize mb-2 ">HTML</h2>
+            <p class="lg:w-2/3 text-sm font-semibold capitalize mb-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto, labore.</p>
+            <div class="flex w-full h-4 bg-white rounded-full overflow-hidden dark:bg-gray-700">
+              <div class="flex flex-col justify-center overflow-hidden bg-orange-600 text-xs text-white text-center" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+              </div>
+          </div>
+        </div>
+
+        <div class="md:flex gap-2 p-2 mb-5">
+          <div class="w-auto">
+            <img class="p-1 w-28 object-fill mx-auto" src="img/CSS3.png" alt="img">
+          </div>
+          <div class="w-auto p-2">
+            <h2 class="text-xl text-blue-500 font-bold capitalize mb-2 ">CSS3</h2>
+            <p class="lg:w-2/3 text-sm font-semibold capitalize mb-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto, labore.</p>
+            <div class="flex w-full h-4 bg-white rounded-full overflow-hidden dark:bg-gray-700">
+            <div class="flex flex-col justify-center overflow-hidden bg-blue-500 text-xs text-white text-center" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="md:flex gap-2 p-2 mb-5">
+          <div class="w-auto">
+            <img class="p-1 w-28 object-fill mx-auto" src="img/tailwind.png" alt="img">
+          </div>
+          <div class="w-auto p-2">
+            <h2 class="text-xl text-sky-500 font-bold capitalize mb-2 ">Tailwind CSS</h2>
+            <p class="lg:w-2/3 text-sm font-semibold capitalize mb-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto, labore.</p>
+            <div class="flex w-full h-4 bg-white rounded-full overflow-hidden dark:bg-gray-700">
+            <div class="flex flex-col justify-center overflow-hidden bg-sky-500 text-xs text-white text-center" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="md:flex gap-2 p-2 mb-5">
+          <div class="w-auto">
+            <img class="p-1 w-28 object-fill mx-auto" src="img/js.png" alt="img">
+          </div>
+          <div class="w-auto p-2">
+            <h2 class="text-xl text-amber-500 font-bold capitalize mb-2 ">JavaScript</h2>
+            <p class="lg:w-2/3 text-sm font-semibold capitalize mb-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto, labore.</p>
+            <div class="flex w-full h-4 bg-white rounded-full overflow-hidden dark:bg-gray-700">
+            <div class="flex flex-col justify-center overflow-hidden bg-amber-500 text-xs text-white text-center" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+  
+
+    <!-- review section -->
+
+    <section class="pb-24">
+      <div class="md:flex flex-col text-center w-full mb-10">
+        <h2 class="text-4xl text-orange-600 font-bold capitalize mb-2 ">Reviews</h2>
+        <p class="lg:w-2/3 mx-auto text-sm font-semibold capitalize mb-5">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom.</p>
+      </div>
+
+      <div class="w-11/12 container mx-auto md:grid grid-cols-3 justify-center gap-2">
+        <div class="md:flex gap-2 rounded p-2 bg-cyan-200 mb-4">
+          <div class=" rounded-full p-5 w-auto">
+            <img src="img/Untitled_design__6_-removebg-preview.png"/>
+          </div>
+
+          <div class="p-2 w-auto">
+            <ul class="flex text-orange-600 text-xl">
+              <li><i class='bx bxs-star'></i></li>
+              <li><i class='bx bxs-star'></i></li>
+              <li><i class='bx bxs-star'></i></li>
+              <li><i class='bx bxs-star'></i></li>
+              <li><i class='bx bxs-star-half' ></i></li>
+            </ul>
+            <h2 class="text-lg font-bold capitalize mb-2">naimur rohman nirob</h2>
+            <p class="text-sm font-semibold capitalize mb-5">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom.</p>
+            <a target="_blank" class="py-2 px-10 rounded bg-sky-500 font-semibold text-center" href="https://coder-mujahid.github.io/bank_counter/">visite now</a>
+          </div>
+
+        </div>
+        <div class="md:flex gap-2 rounded w-auto p-2 bg-lime-200 mb-4">
+          <div class=" rounded-full p-5 w-auto">
+            <img src="img/Untitled_design__6_-removebg-preview.png"/>
+          </div>
+
+          <div class="p-2 w-auto">
+            <ul class="flex text-orange-600 text-xl">
+              <li><i class='bx bxs-star'></i></li>
+              <li><i class='bx bxs-star'></i></li>
+              <li><i class='bx bxs-star'></i></li>
+              <li><i class='bx bxs-star'></i></li>
+              <li><i class='bx bxs-star-half' ></i></li>
+            </ul>
+            <h2 class="text-lg font-bold capitalize mb-2">naimur rohman nirob</h2>
+            <p class="text-sm font-semibold capitalize mb-5">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom.</p>
+            <a target="_blank" class="py-2 px-10 rounded bg-sky-500 font-semibold text-center" href="https://coder-mujahid.github.io/bank_counter/">visite now</a>
+          </div>
+
+        </div>
+
+        <div class="md:flex gap-2 rounded w-auto p-2 bg-blue-200 mb-4">
+          <div class=" rounded-full p-5 w-auto">
+            <img src="img/Untitled_design__6_-removebg-preview.png"/>
+          </div>
+
+          <div class="p-2 w-auto">
+            <ul class="flex text-orange-600 text-xl">
+              <li><i class='bx bxs-star'></i></li>
+              <li><i class='bx bxs-star'></i></li>
+              <li><i class='bx bxs-star'></i></li>
+              <li><i class='bx bxs-star'></i></li>
+              <li><i class='bx bxs-star-half' ></i></li>
+            </ul>
+            <h2 class="text-lg font-bold capitalize mb-2">naimur rohman nirob</h2>
+            <p class="text-sm font-semibold capitalize mb-5">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom.</p>
+            <a target="_blank" class="py-2 px-10 rounded bg-sky-500 font-semibold text-center" href="https://coder-mujahid.github.io/bank_counter/">visite now</a>
+          </div>
+
+        </div>
+
+        <div class="md:flex gap-2 rounded w-auto p-2 bg-green-200 mb-4">
+          <div class=" rounded-full p-5 w-auto">
+            <img src="img/Untitled_design__6_-removebg-preview.png"/>
+          </div>
+
+          <div class="p-2 w-auto">
+            <ul class="flex text-orange-600 text-xl">
+              <li><i class='bx bxs-star'></i></li>
+              <li><i class='bx bxs-star'></i></li>
+              <li><i class='bx bxs-star'></i></li>
+              <li><i class='bx bxs-star'></i></li>
+              <li><i class='bx bxs-star-half' ></i></li>
+            </ul>
+            <h2 class="text-lg font-bold capitalize mb-2">naimur rohman nirob</h2>
+            <p class="text-sm font-semibold capitalize mb-5">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom.</p>
+            <a target="_blank" class="py-2 px-10 rounded bg-sky-500 font-semibold text-center" href="https://coder-mujahid.github.io/bank_counter/">visite now</a>
+          </div>
+
+        </div>
+
+        <div class="md:flex gap-2 rounded w-auto p-2 bg-red-200 mb-4">
+          <div class=" rounded-full p-5 w-auto">
+            <img src="img/Untitled_design__6_-removebg-preview.png"/>
+          </div>
+
+          <div class="p-2 w-auto">
+            <ul class="flex text-orange-600 text-xl">
+              <li><i class='bx bxs-star'></i></li>
+              <li><i class='bx bxs-star'></i></li>
+              <li><i class='bx bxs-star'></i></li>
+              <li><i class='bx bxs-star'></i></li>
+              <li><i class='bx bxs-star-half' ></i></li>
+            </ul>
+            <h2 class="text-lg font-bold capitalize mb-2">naimur rohman nirob</h2>
+            <p class="text-sm font-semibold capitalize mb-5">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom.</p>
+            <a target="_blank" class="py-2 px-10 rounded bg-sky-500 font-semibold text-center" href="https://coder-mujahid.github.io/bank_counter/">visite now</a>
+          </div>
+
+        </div>
+        
+      </div>
+    </section>
+    
+
+    <!-- contact section -->
+
+    <section class="pb-10">
+
+      <div class="md:flex flex-col text-center w-full mb-5">
+        <h2 class="text-4xl text-orange-600 font-bold capitalize mb-2 ">contact me now</h2>
+        <p class="lg:w-2/3 mx-auto text-sm font-semibold capitalize mb-5">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table</p>
+      </div>
+
+      <div class="text-gray-600 body-font relative">
+        <div class="absolute inset-0 bg-gray-300 md:w-11/12 container mx-auto">
+          <iframe width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0" title="map" scrolling="no" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=%C4%B0zmir+(My%20Business%20Name)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" style="filter: grayscale(1) contrast(1.2) opacity(0.4);"></iframe>
+        </div>
+        <div class="container px-5 py-10 mx-auto flex">
+          <div class="lg:w-1/3 md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md">
+            <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">Feedback</h2>
+            <p class="leading-relaxed mb-5 text-gray-600">Post-ironic portland shabby chic echo park, banjo fashion axe</p>
+            <div class="relative mb-4">
+              <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
+              <input type="email" id="email" name="email" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            </div>
+            <div class="relative mb-4">
+              <label for="message" class="leading-7 text-sm text-gray-600">Message</label>
+              <textarea id="message" name="message" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+            </div>
+            <button class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">submit</button>
+            <p class="text-xs text-gray-500 mt-3">Chicharrones blog helvetica normcore iceland tousled brook viral artisan.</p>
+          </div>
+        </div>
+      </div>
+  
+    </section>
+
+    <!-- footer section -->
+    <footer class="footer footer-center p-10 bg-base-200 text-base-content rounded bg-slate-400">
+      <nav class=" md:flex gap-4 flex-row w-full mx-auto items-center justify-center">
+        <a class="link link-hover text-lg font-semibold ">About us</a> 
+        <a class="link link-hover text-lg font-semibold">Contact</a> 
+        <a class="link link-hover text-lg font-semibold">Jobs</a> 
+        <a class="link link-hover text-lg font-semibold">Press kit</a>
+      </nav> 
+      <nav>
+        <div class="grid grid-flow-col gap-4 md:grid">
+          <a href="https://twitter.com/?lang=en"><i class='bx bxl-twitter text-4xl text-sky-500'></i></a>
+          <a href="https://www.youtube.com/"><i class='bx bxl-youtube text-4xl text-red-600' ></i></a>
+          <a href="https://www.facebook.com/"><i class='bx bxl-facebook-square text-4xl text-blue-900' ></i></a>
+        </div>
+      </nav> 
+      <aside>
+        <p>Copyright © 2023 - All right reserved by <span class="text-blue-600 text-lg font-semibold">Md Mujahid islam</span> </p>
+      </aside>
+    </footer>
+    
+
+</body>
+</html>

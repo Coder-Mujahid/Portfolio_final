@@ -11,60 +11,32 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/rippleui@1.12.1/dist/css/styles.css"/>
     
-
+  <link rel="stylesheet" href="style.css">
 </head>
 <body class=" bg-[#E7E7E7]">
     <!-- manu bar -->
-    <header>
-        <div class="navbar bg-base-100 w-11/12 mx-auto">
-            <div class="flex-1">
-              <!-- drower menu start -->
-                <input type="checkbox" id="drawer-left" class="drawer-toggle" />
+        <header>
+          <div class=" w-11/12 mx-auto items-center flex justify-between py-5 bg-slate-300 rounded z-10">
 
-                <label for="drawer-left"><i class='bx bx-menu text-4xl font-semibold border-solid border-2 border-black px-[5px] py-[4px] rounded-full'></i></label><img class="w-44 ml-10" src="img/Black___White_Minimalist_Business_Logo-removebg-preview.png" alt="image">
-                <label class="overlay" for="drawer-left"></label>
-
-                <div class="drawer bg-slate-300">
-                    <div class="drawer-content pt-10 flex flex-col h-full">
-                        <label for="drawer-left" class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 ">✕</label>
-                        <br>
-                        <div class="bg-slate-100 rounded">
-                            <!-- menu -->
-                            <nav class="menu bg-gray-2 p-4 rounded-md">
-                                <section class="menu-section">
-                                    <span class="text-xl font-semibold capitalize bg-slate-200 p-3 rounded">Main menu</span>
-                                    <ul class="menu-items">
-                                        <li class="menu-item text-lg font-semibold capitalize"></i>home</li>
-                                        <li class="menu-item text-lg font-semibold capitalize">about me</li>
-                                        <li class="menu-item text-lg font-semibold capitalize">Projects</li>
-                                        <li class="menu-item text-lg font-semibold capitalize">skills</li>
-                                        <li class="menu-item text-lg font-semibold capitalize">reviews</li>
-                                        <li class="menu-item text-lg font-semibold capitalize">contact</li>
-
-                                    </ul>
-                                </section>
-                            </nav>
-                        </div>
-                        <div class="h-full flex flex-row justify-end items-end gap-2">
-                            <aside>
-                                <p class="capitalize font-semibold">Copyright © 2023 -Md Mujahidul Islam</p>
-                              </aside>
-                        </div>
-                    </div>
-                </div>
-              <!-- drower menu end -->
+            <div class="pl-5 flex gap-3">
+              <div class=" border-2 border-black rounded-full">
+                <i id="click" class='bx bx-menu text-4xl p-1 font-bold'></i>
+              </div>
+              <img class="w-36" src="/img/Black___White_Minimalist_Business_Logo-removebg-preview.png" alt="img">
             </div>
-            <div class="flex-none gap-2">
+
+           
+            <div class="flex gap-2 items-center justify-center pr-5">
               <div class="form-control hidden md:block">
                 <input type="text" placeholder="Search" class="input input-bordered w-24 mx-5 md:w-auto" />
               </div>
               <div class="dropdown dropdown-end">
-                <label tabindex="0" class="btn btn-ghost btn-circle avatar">
-                  <div class="w-10 rounded-full">
-                    <img src="img/Untitled_design__6_-removebg-preview.png" alt="img">
+                <label tabindex="0">
+                  <div class="rounded-full border-2 border-red-500 w-16">
+                    <img class=" p-1" src="img/Untitled_design__6_-removebg-preview.png" alt="">
                   </div>
                 </label>
-                <ul tabindex="0" class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+                <ul tabindex="0" class="mt-3 z-[1] p-2 w-full shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
                  <li><a target="_blank" class="text-lg font-semibold" href="https://www.facebook.com/home.php"><i class='bx bxl-facebook-circle'></i>Facebook</a></li>
                  <li><a target="_blank" class="text-lg font-semibold" href="https://www.instagram.com/?hl=en"><i class='bx bxl-instagram-alt' ></i>Instagram</a></li>
                  <li><a target="_blank" class="text-lg font-semibold" href="https://bd.linkedin.com/"><i class='bx bxl-linkedin-square'></i>linkedin</a></li>
@@ -74,10 +46,39 @@
               </div>
             </div>
           </div>
-    </header>
+                   <!-- drop menu start-->
+        <div id="drop" class="hiddenn">
+          <section  class="w-11/12 mx-auto bg-[#df6e6ecb]">
+            <ul class="menu-items p-5">
+                <!-- <li><span class="text-xl menu-item font-semibold capitalize bg-slate-200 rounded ">Main menu</span></li> -->
+                <li ><a href="#hero" class="menu-item text-lg font-semibold capitalize">home</a></li>
+                <li ><a href="#about" class="menu-item text-lg font-semibold capitalize">about me</a></li>
+                <li ><a href="#project" class="menu-item text-lg font-semibold capitalize">Projects</a></li>
+                <li ><a href="#skill" class="menu-item text-lg font-semibold capitalize">skills</a></li>
+                <li ><a href="#review" class="menu-item text-lg font-semibold capitalize">reviews</a></li>
+                <li ><a href="#contact" class="menu-item text-lg font-semibold capitalize">contact</a></li>
+            </ul>
+          </section>
+        </div>
+
+      <script>
+        // const data=document.getElementById('click')
+        document.getElementById('click').addEventListener('click', function(){
+          const data1 = document.getElementById('drop')
+
+          data1.classList.toggle('hiddenn')
+          
+          
+
+        })
+    </script>
+<!-- drop menu end-->
+        </header>
+
+
     <!-- hero section -->
 
-    <section class="body-font text-black w-screen">
+    <section id="hero" class="body-font text-black w-screen">
         <div class=" w-11/12 container mx-auto flex px-5 py-24 md:flex-row flex-col items-center justify-between">
           <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
             <p class="text-base font-semibold capitalize mb-3 ">hello there welcome to my portfolio</p>
@@ -145,7 +146,7 @@
 
       <!-- about section -->
 
-      <section class=" mb-20 flex items-center justify-center ">
+      <section id="about" class=" flex items-center justify-center py-20">
         <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
             <div class="grid items-center grid-cols-1 md:grid-cols-2">
     
@@ -183,7 +184,7 @@
 
     <!-- project section -->
 
-    <section>
+    <section id="project" class="w-screen">
       <div class="md:flex flex-col text-center w-full mb-10">
         <h2 class="text-4xl text-orange-600 font-bold capitalize mb-2 ">my projects</h2>
         <p class="lg:w-2/3 mx-auto text-sm font-semibold capitalize mb-5">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom.</p>
@@ -256,9 +257,9 @@
 
     <!-- skill section -->
 
-    <section class="py-20">
+    <section id="skill" class="py-20">
       <div class="md:flex flex-col text-center w-full mb-10">
-        <h2 class="text-4xl text-orange-600 font-bold capitalize mb-2 ">my projects</h2>
+        <h2 class="text-4xl text-orange-600 font-bold capitalize mb-2 ">skills</h2>
         <p class="lg:w-2/3 mx-auto text-sm font-semibold capitalize mb-5">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom.</p>
       </div>
 
@@ -325,19 +326,21 @@
 
     <!-- review section -->
 
-    <section class="pb-24">
+    <section id="review" class="pb-24">
       <div class="md:flex flex-col text-center w-full mb-10">
         <h2 class="text-4xl text-orange-600 font-bold capitalize mb-2 ">Reviews</h2>
         <p class="lg:w-2/3 mx-auto text-sm font-semibold capitalize mb-5">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom.</p>
       </div>
 
-      <div class="w-11/12 container mx-auto md:grid grid-cols-3 justify-center gap-2">
-        <div class="md:flex gap-2 rounded p-2 bg-cyan-200 mb-4">
-          <div class=" rounded-full p-5 w-auto">
-            <img src="img/Untitled_design__6_-removebg-preview.png"/>
+      <div class="w-11/12 container mx-auto lg:grid-cols-3 md:grid grid-cols-2 justify-center gap-2">
+        <div class="md:flex gap-2 rounded p-3 justify-center items-center bg-cyan-200 mb-4">
+          <div class=" rounded-full py-5 w-auto">
+            <img class=" border-4 mx-auto p-1 border-black rounded-full" src="img/nimur.png"/>
+            <h2 class="text-2xl text-center text-orange-600 font-bold capitalize ">UIT</h2>
+            <p class="text-lg text-center font-semibold capitalize">Sinior developer</p>
           </div>
 
-          <div class="p-2 w-auto">
+          <div class="pt-5 w-auto">
             <ul class="flex text-orange-600 text-xl">
               <li><i class='bx bxs-star'></i></li>
               <li><i class='bx bxs-star'></i></li>
@@ -346,37 +349,21 @@
               <li><i class='bx bxs-star-half' ></i></li>
             </ul>
             <h2 class="text-lg font-bold capitalize mb-2">naimur rohman nirob</h2>
-            <p class="text-sm font-semibold capitalize mb-5">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom.</p>
-            <a target="_blank" class="py-2 px-10 rounded bg-sky-500 font-semibold text-center" href="https://coder-mujahid.github.io/bank_counter/">visite now</a>
-          </div>
-
-        </div>
-        <div class="md:flex gap-2 rounded w-auto p-2 bg-lime-200 mb-4">
-          <div class=" rounded-full p-5 w-auto">
-            <img src="img/Untitled_design__6_-removebg-preview.png"/>
-          </div>
-
-          <div class="p-2 w-auto">
-            <ul class="flex text-orange-600 text-xl">
-              <li><i class='bx bxs-star'></i></li>
-              <li><i class='bx bxs-star'></i></li>
-              <li><i class='bx bxs-star'></i></li>
-              <li><i class='bx bxs-star'></i></li>
-              <li><i class='bx bxs-star-half' ></i></li>
-            </ul>
-            <h2 class="text-lg font-bold capitalize mb-2">naimur rohman nirob</h2>
-            <p class="text-sm font-semibold capitalize mb-5">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom.</p>
-            <a target="_blank" class="py-2 px-10 rounded bg-sky-500 font-semibold text-center" href="https://coder-mujahid.github.io/bank_counter/">visite now</a>
+            <p class="text-sm font-semibold capitalize mb-5">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table.</p>
+            <button class="w-full bg-sky-500 py-2 rounded text-lg font-semibold capitalize " onclick="window.location.href = 'https://github.com/nimurr';">contact now</button>
           </div>
 
         </div>
 
-        <div class="md:flex gap-2 rounded w-auto p-2 bg-blue-200 mb-4">
-          <div class=" rounded-full p-5 w-auto">
-            <img src="img/Untitled_design__6_-removebg-preview.png"/>
+
+        <div class="md:flex gap-2 rounded p-3 justify-center items-center bg-red-200 mb-4">
+          <div class=" rounded-full py-5 w-auto">
+            <img class=" border-4 mx-auto p-1 border-black rounded-full" src="img/dipok.jpg"/>
+            <h2 class="text-2xl text-center text-orange-600 font-bold capitalize ">UIT</h2>
+            <p class="text-lg text-center font-semibold capitalize">Sinior developer</p>
           </div>
 
-          <div class="p-2 w-auto">
+          <div class="pt-5 w-auto">
             <ul class="flex text-orange-600 text-xl">
               <li><i class='bx bxs-star'></i></li>
               <li><i class='bx bxs-star'></i></li>
@@ -384,19 +371,21 @@
               <li><i class='bx bxs-star'></i></li>
               <li><i class='bx bxs-star-half' ></i></li>
             </ul>
-            <h2 class="text-lg font-bold capitalize mb-2">naimur rohman nirob</h2>
-            <p class="text-sm font-semibold capitalize mb-5">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom.</p>
-            <a target="_blank" class="py-2 px-10 rounded bg-sky-500 font-semibold text-center" href="https://coder-mujahid.github.io/bank_counter/">visite now</a>
+            <h2 class="text-lg font-bold capitalize mb-2">dipok roy</h2>
+            <p class="text-sm font-semibold capitalize mb-5">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table.</p>
+            <button class="w-full bg-sky-500 py-2 rounded text-lg font-semibold capitalize " onclick="window.location.href = 'https://github.com/dipokroydip3';">contact now</button>
           </div>
 
         </div>
 
-        <div class="md:flex gap-2 rounded w-auto p-2 bg-green-200 mb-4">
-          <div class=" rounded-full p-5 w-auto">
-            <img src="img/Untitled_design__6_-removebg-preview.png"/>
+        <div class="md:flex gap-2 rounded p-3 justify-center items-center bg-green-200 mb-4">
+          <div class=" rounded-full py-5 w-auto">
+            <img class=" border-4 mx-auto p-1 border-black rounded-full" src="img/dipu.jpg"/>
+            <h2 class="text-2xl text-center text-orange-600 font-bold capitalize ">UIT</h2>
+            <p class="text-lg text-center font-semibold capitalize">Sinior developer</p>
           </div>
 
-          <div class="p-2 w-auto">
+          <div class="pt-5 w-auto">
             <ul class="flex text-orange-600 text-xl">
               <li><i class='bx bxs-star'></i></li>
               <li><i class='bx bxs-star'></i></li>
@@ -404,19 +393,21 @@
               <li><i class='bx bxs-star'></i></li>
               <li><i class='bx bxs-star-half' ></i></li>
             </ul>
-            <h2 class="text-lg font-bold capitalize mb-2">naimur rohman nirob</h2>
-            <p class="text-sm font-semibold capitalize mb-5">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom.</p>
-            <a target="_blank" class="py-2 px-10 rounded bg-sky-500 font-semibold text-center" href="https://coder-mujahid.github.io/bank_counter/">visite now</a>
+            <h2 class="text-lg font-bold capitalize mb-2">Dipu Debnath</h2>
+            <p class="text-sm font-semibold capitalize mb-5">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table.</p>
+            <button class="w-full bg-sky-500 py-2 rounded text-lg font-semibold capitalize " onclick="window.location.href = 'https://github.com/DipuDebnath1';">contact now</button>
           </div>
 
         </div>
 
-        <div class="md:flex gap-2 rounded w-auto p-2 bg-red-200 mb-4">
-          <div class=" rounded-full p-5 w-auto">
-            <img src="img/Untitled_design__6_-removebg-preview.png"/>
+        <div class="md:flex gap-2 rounded p-3 justify-center items-center bg-blue-200 mb-4">
+          <div class=" rounded-full py-5 w-auto">
+            <img class=" border-4 mx-auto p-1 border-black rounded-full" src="img/mahmud.jpg"/>
+            <h2 class="text-2xl text-center text-orange-600 font-bold capitalize ">UIT</h2>
+            <p class="text-lg text-center font-semibold capitalize">Sinior developer</p>
           </div>
 
-          <div class="p-2 w-auto">
+          <div class="pt-5 w-auto">
             <ul class="flex text-orange-600 text-xl">
               <li><i class='bx bxs-star'></i></li>
               <li><i class='bx bxs-star'></i></li>
@@ -424,9 +415,31 @@
               <li><i class='bx bxs-star'></i></li>
               <li><i class='bx bxs-star-half' ></i></li>
             </ul>
-            <h2 class="text-lg font-bold capitalize mb-2">naimur rohman nirob</h2>
-            <p class="text-sm font-semibold capitalize mb-5">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom.</p>
-            <a target="_blank" class="py-2 px-10 rounded bg-sky-500 font-semibold text-center" href="https://coder-mujahid.github.io/bank_counter/">visite now</a>
+            <h2 class="text-lg font-bold capitalize mb-2">mahmudul hasan</h2>
+            <p class="text-sm font-semibold capitalize mb-5">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table.</p>
+            <button class="w-full bg-sky-500 py-2 rounded text-lg font-semibold capitalize " onclick="window.location.href = 'https://github.com/mahmudul03';">contact now</button>
+          </div>
+
+        </div>
+
+        <div class="md:flex gap-2 rounded p-3 justify-center items-center bg-yellow-200 mb-4">
+          <div class=" rounded-full py-5 w-auto">
+            <img class=" border-4 mx-auto p-1 border-black rounded-full" src="img/himel.jpg"/>
+            <h2 class="text-2xl text-center text-orange-600 font-bold capitalize ">UIT</h2>
+            <p class="text-lg text-center font-semibold capitalize">Sinior developer</p>
+          </div>
+
+          <div class="pt-5 w-auto">
+            <ul class="flex text-orange-600 text-xl">
+              <li><i class='bx bxs-star'></i></li>
+              <li><i class='bx bxs-star'></i></li>
+              <li><i class='bx bxs-star'></i></li>
+              <li><i class='bx bxs-star'></i></li>
+              <li><i class='bx bxs-star-half' ></i></li>
+            </ul>
+            <h2 class="text-lg font-bold capitalize mb-2">Mehedi Hasan Himel</h2>
+            <p class="text-sm font-semibold capitalize mb-5">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table.</p>
+            <button class="w-full bg-sky-500 py-2 rounded text-lg font-semibold capitalize " onclick="window.location.href = 'https://github.com/Mehedi-Hasan-Himel';">contact now</button>
           </div>
 
         </div>
@@ -437,7 +450,7 @@
 
     <!-- contact section -->
 
-    <section class="pb-10">
+    <section id="contact" class="pb-10">
 
       <div class="md:flex flex-col text-center w-full mb-5">
         <h2 class="text-4xl text-orange-600 font-bold capitalize mb-2 ">contact me now</h2>

@@ -1,0 +1,12 @@
+
+#drop{
+    position: absolute;
+    top: 100px; 
+    width: 100%;
+    transition: 0.3s;
+
+}
+.hiddenn{
+    margin-top: 1000px;
+    visibility: hidden;
+}

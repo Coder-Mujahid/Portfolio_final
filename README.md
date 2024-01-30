@@ -17,7 +17,6 @@ Check out the live demo [here](https://coder-mujahid.github.io/Portfolio_final/)
 ## ⚙️ Technologies Used
 
 - **HTML, CSS, JavaScript:** Built with modern web technologies for a smooth and seamless user experience.
-- **React:** Utilized the React library for efficient component-based development and enhanced performance.
 - **GitHub Pages:** Deployed the portfolio using GitHub Pages for easy access and sharing.
 
 ## 📷 Screenshots

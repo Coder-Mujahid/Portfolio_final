@@ -23,7 +23,6 @@ Check out the live demo [here](https://coder-mujahid.github.io/Portfolio_final/)
 
 ![Screenshot 1](screenshots/screenshot1.png)
 ![Screenshot 2](screenshots/screenshot2.png)
-![Screenshot 3](screenshots/screenshot3.png)
 
 ## 📝 Feedback
 
